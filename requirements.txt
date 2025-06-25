@@ -1,0 +1,29 @@
+# RM Platform Requirements
+#
+# Usage:
+# - For development: pip install -r requirements/dev.txt
+# - For production: pip install -r requirements/production.txt
+# - For API: pip install -r requirements/api.txt
+#
+# This file is a meta-list. Use the specific files in requirements/ for each environment.
+#
+# To lock dependencies, use pip-tools or pip freeze > requirements-lock.txt
+
+-r requirements/base.txt
+
+# Development extras
+-r requirements/dev.txt
+
+# API extras
+-r requirements/api.txt
+
+# Production extras
+# -r requirements/production.txt
+
+# Communication, performance, realtime, security
+# -r requirements/communication.txt
+# -r requirements/performance.txt
+# -r requirements/realtime.txt
+# -r requirements/security.txt
+
+

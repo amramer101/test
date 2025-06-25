@@ -1,0 +1,84 @@
+# Communication module dependencies for RM_Platform (Python 3.12 Compatible)
+# Real-time communication with performance optimizations
+
+# Core filtering framework
+django-filter==24.2
+
+# API enhancements
+drf-nested-routers==0.94.1
+drf-spectacular==0.27.2
+
+# WebSocket and Real-time Features
+channels==4.1.0
+channels-redis==4.2.0
+daphne==4.1.2
+
+# WebSocket Testing and Client
+websocket-client==1.8.0
+
+# Message Queue & Background Tasks
+celery[redis]==5.4.0
+valkey==6.0.2
+django-celery-beat==2.6.0
+django-celery-results==2.5.1
+kombu==5.3.7
+
+# Alternative Message Brokers
+pika==1.3.2
+django-rq==2.10.2
+
+# Real-time Notifications & Push
+django-push-notifications==3.1.0
+py-vapid==1.9.1
+
+# Performance and Caching
+django-redis==5.4.0
+django-cachalot==2.8.0
+django-cache-memoize==0.2.0
+
+# File handling for message attachments
+django-storages[s3]==1.14.4
+Pillow==10.4.0
+python-magic==0.4.27
+
+# Rate limiting
+django-ratelimit==4.1.0
+
+# Background tasks monitoring
+flower==2.0.1
+
+# Database optimizations
+django-extensions==3.2.3
+
+# WebSocket Security & Authentication
+django-cors-headers==4.3.1
+
+# Message Serialization
+msgpack==1.0.8
+orjson==3.10.6
+
+# Real-time Analytics & Metrics
+django-prometheus==2.3.1
+statsd==4.0.1
+
+# Session Management
+django-user-sessions==2.0.0
+
+# Content Compression & Optimization
+django-compression-middleware==0.5.0
+
+# Real-time Data Synchronization
+django-model-utils==4.5.1
+django-simple-history==3.7.0
+
+# WebSocket Load Balancing & Scaling
+gevent==24.2.1
+
+# Message Broadcasting & Pub/Sub
+valkey==6.0.2
+
+# Async HTTP Client for External APIs
+httpx==0.27.0
+
+# Performance Monitoring
+prometheus-client==0.20.0

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Email Verification</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f7f7f7;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                background: #fff;
+                max-width: 500px;
+                margin: 40px auto;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+                padding: 32px 24px;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 24px;
+            }
+            .token-box {
+                background: #f0f4fa;
+                border: 1px solid #dbeafe;
+                border-radius: 6px;
+                padding: 18px;
+                font-size: 1.2em;
+                color: #2563eb;
+                text-align: center;
+                letter-spacing: 2px;
+                margin: 24px 0;
+            }
+            .footer {
+                margin-top: 32px;
+                font-size: 0.95em;
+                color: #888;
+                text-align: center;
+            }
+            .btn {
+                display: inline-block;
+                background: #2563eb;
+                color: #fff !important;
+                padding: 12px 28px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: bold;
+                margin-top: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Verify Your Email Address</h2>
+            </div>
+            <p>Hello,</p>
+            <p>
+                Thank you for registering with RM Platform. To complete your
+                registration and activate your account, please verify your email
+                address using the code below:
+            </p>
+            <div class="token-box">{{ token }}</div>
+            <p>Or click the button below to verify directly:</p>
+            {% if verification_url %}
+            <p style="text-align: center">
+                <a href="{{ verification_url }}" class="btn">Verify Email</a>
+            </p>
+            {% endif %}
+            <p>
+                If you did not create an account, you can safely ignore this
+                email.
+            </p>
+            <div class="footer">
+                &copy; {{ current_year|default:"2025" }} RM Platform. All rights
+                reserved.
+            </div>
+        </div>
+    </body>
+</html>

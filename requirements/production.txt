@@ -1,0 +1,103 @@
+# Production dependencies for RM_Platform (Python 3.12 Compatible)
+-r api.txt
+-r realtime.txt
+
+# Production Web Servers - Python 3.12 Ready
+gunicorn==23.0.0
+uvicorn[standard]==0.30.1
+daphne==4.1.2
+
+# Database - Production Optimized
+psycopg[binary,pool]==3.2.1
+psycopg2-binary==2.9.9
+django-dbconn-retry==0.1.7
+
+# Static Files & Media - Cloud Optimized
+django-storages[s3]==1.14.4
+whitenoise==6.7.0
+brotli==1.1.0
+django-compression-middleware==0.5.0
+
+# Caching - High Performance
+django-redis==5.4.0
+valkey[hiredis]==6.0.2
+django-cachalot==2.8.0
+django-cache-memoize==0.2.0
+
+# Security - Production Grade
+sentry-sdk[django]==2.5.0
+django-axes==6.4.0
+django-csp==3.8
+django-health-check==3.18.2
+
+# SSL/TLS & HTTPS
+certifi==2024.6.2
+cryptography==44.0.1
+pyopenssl==24.1.0
+
+# Monitoring & Performance - Production APM
+scout-apm==2.26.1
+django-prometheus==2.3.1
+prometheus-client==0.20.0
+
+# Logging & Observability
+python-json-logger==2.0.7
+structlog==24.2.0
+django-request-logging==0.7.5
+
+# Background Tasks - Production Scale
+celery[redis]==5.4.0
+django-celery-beat==2.6.0
+django-celery-results==2.5.1
+flower==2.0.1
+kombu==5.3.7
+
+# Message Brokers - High Availability
+valkey==6.0.2
+pika==1.3.2
+
+# AWS Integration - Production Cloud Services
+boto3==1.34.127
+django-ses==3.5.2
+
+# Email & Notifications - Production Scale
+django-anymail[mailgun,sendgrid]==10.3
+
+# Database Migrations & Management
+django-migration-linter==5.0.0
+django-extensions==3.2.3
+
+# Performance Optimization
+django-querycount==0.8.3
+orjson==3.10.6
+
+# Load Balancing & Scaling
+gevent==24.2.1
+greenlet==3.0.3
+
+# System Monitoring
+psutil==5.9.8
+
+# Time Zone & Internationalization
+pytz==2024.1
+
+# Production Configuration Management
+python-decouple==3.8
+django-environ==0.11.2
+
+# Rate Limiting - Production Scale
+django-ratelimit==4.1.0
+
+# WebSocket Production Support
+channels==4.1.0
+channels-redis==4.2.0
+
+# API Rate Limiting & Protection
+django-cors-headers==4.3.1
+django-oauth-toolkit==1.7.1
+
+# Production Utilities
+setproctitle==1.3.3
+
+# Health Checks & Status Monitoring
+django-watchman==1.3.0

@@ -1,0 +1,19 @@
+Hello,
+
+Thank you for registering with RM Platform!
+
+To complete your registration and activate your account, please verify your email address using the code below:
+
+Verification Code: {{ token }}
+
+{% if verification_url %}
+Alternatively, you can verify your email by clicking the following link:
+{{ verification_url }}
+{% endif %}
+
+If you did not create an account, you can safely ignore this email.
+
+Best regards,
+The RM Platform Team
+
+{{ current_year|default:"2025" }}

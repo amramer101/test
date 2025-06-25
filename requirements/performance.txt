@@ -1,0 +1,178 @@
+# Performance-focused dependencies for RM_Platform (Python 3.12 Compatible)
+# Optional performance optimizations - include for maximum performance
+# Usage: pip install -r performance.txt
+
+-r base.txt
+
+# ==============================================================================
+# DATABASE PERFORMANCE & OPTIMIZATION
+# ==============================================================================
+
+# Advanced PostgreSQL Performance
+psycopg[binary,pool]==3.2.1         # Modern PostgreSQL adapter with built-in pooling
+django-dbconn-retry==0.1.7           # Automatic database connection retry
+django-bulk-update==2.2.0            # Bulk database operations for performance
+
+# Query Optimization & Analysis
+django-cachalot==2.8.0               # Automatic ORM query caching - MASSIVE performance boost
+django-cache-memoize==0.2.0          # Function-level caching with TTL support
+django-querycount==0.8.3             # Database query monitoring and optimization
+nplusone==1.0.0                      # N+1 query detection and prevention
+django-debug-toolbar==4.4.2          # SQL query analysis (development)
+
+# ==============================================================================
+# CACHING & MEMORY OPTIMIZATION
+# ==============================================================================
+
+# Advanced Valkey Configuration
+valkey[hiredis]==6.0.2               # Valkey with C extension for maximum performance
+django-redis==5.4.0                  # Django Redis cache backend (compatible with Valkey)
+fakeredis==2.23.3                    # Redis mocking for testing (compatible with Valkey)
+
+# Memory-based Caching
+pymemcache==4.0.0                    # Pure Python Memcached client
+
+# Smart Caching Strategies
+django-cache-utils==0.8.0            # Cache utilities and decorators
+
+# ==============================================================================
+# SERIALIZATION & DATA PROCESSING
+# ==============================================================================
+
+# High-Performance Serialization
+orjson==3.10.6                       # Ultra-fast JSON serialization (2-3x faster than stdlib)
+msgpack==1.0.8                       # Binary serialization for reduced payload size
+
+# Data Processing Performance
+numpy==2.1.0                         # Numerical computing with C extensions
+pandas==2.2.3                        # Data analysis with optimized operations
+
+# ==============================================================================
+# WEB SERVER & ASGI PERFORMANCE
+# ==============================================================================
+
+# High-Performance ASGI Servers
+uvicorn[standard]==0.30.1            # Lightning-fast ASGI server with C extensions
+daphne==4.1.2                        # Production ASGI server for WebSockets
+
+# WSGI Performance
+gunicorn==23.0.0                     # Python WSGI HTTP Server
+gevent==24.2.1                       # Async networking library for scaling
+greenlet==3.0.3                      # Micro-threads for async operations
+
+# ==============================================================================
+# RESPONSE OPTIMIZATION & COMPRESSION
+# ==============================================================================
+
+# Content Compression
+brotli==1.1.0                        # Brotli compression (better than gzip)
+django-compression-middleware==0.5.0  # Response compression middleware
+
+# Static File Optimization
+whitenoise==6.7.0                    # Static file serving with compression
+django-compressor==4.5.1             # CSS/JS compression and compilation
+
+# ==============================================================================
+# ASYNC & CONCURRENCY PERFORMANCE
+# ==============================================================================
+
+# Async Database Operations
+asyncpg==0.29.0                      # Async PostgreSQL driver (fastest)
+aioredis==2.0.1                      # Async Redis client (compatible with Valkey)
+
+# Async HTTP Operations
+httpx==0.27.0                        # Modern async HTTP client
+aiohttp==3.10.11                       # Async HTTP framework
+aiofiles==23.2.1                     # Async file operations
+
+# ==============================================================================
+# PROFILING & PERFORMANCE MONITORING
+# ==============================================================================
+
+# Code Profiling
+django-silk==5.2.0                   # Request profiling with beautiful web UI
+py-spy==0.3.14                       # Python performance profiler (no overhead)
+line-profiler==4.1.3                 # Line-by-line performance profiling
+memory-profiler==0.61.0              # Memory usage profiling
+pympler==0.9                         # Memory leak detection and analysis
+
+# Application Performance Monitoring
+scout-apm==2.26.1                    # Application Performance Monitoring
+prometheus-client==0.20.0            # Prometheus metrics
+
+# Performance Testing
+locust==2.29.1                       # Load testing framework
+django-slowtests==1.1.1              # Identify slow unit tests
+
+# ==============================================================================
+# IMAGE & MEDIA PROCESSING PERFORMANCE
+# ==============================================================================
+
+# Optimized Image Processing
+Pillow==10.4.0                       # Latest Pillow with Python 3.12 support
+imageio==2.34.1                      # Image I/O optimization
+
+# ==============================================================================
+# BACKGROUND TASK PERFORMANCE
+# ==============================================================================
+
+# High-Performance Task Queue
+celery[redis]==5.4.0                 # Distributed task queue with Valkey optimization
+kombu==5.3.7                         # Advanced message transport
+django-celery-beat==2.6.0            # Periodic task scheduling
+django-celery-results==2.5.1         # Task result storage
+flower==2.0.1                        # Celery monitoring
+
+# Alternative Task Queues
+django-rq==2.10.2                    # Redis Queue (simpler than Celery)
+
+# ==============================================================================
+# NETWORK & I/O PERFORMANCE
+# ==============================================================================
+
+# Network Optimization
+requests==2.32.4                     # HTTP library with connection pooling
+urllib3==2.5.0                       # Advanced HTTP client features
+certifi==2024.6.2                    # Certificate bundle for HTTPS
+
+# File I/O Performance
+aiofiles==23.2.1                     # Async file operations
+watchdog==4.0.1                      # Efficient file system monitoring
+
+# ==============================================================================
+# PYTHON RUNTIME PERFORMANCE
+# ==============================================================================
+
+# Python Performance Tools
+setproctitle==1.3.3                  # Process title setting for monitoring
+psutil==5.9.8                        # System and process monitoring
+
+# ==============================================================================
+# DEVELOPMENT PERFORMANCE TOOLS
+# ==============================================================================
+
+# Development Optimization
+django-extensions==3.2.3             # Management command extensions
+django-queryinspect==1.1.0           # SQL query inspection
+
+# ==============================================================================
+# INSTALLATION NOTES
+# ==============================================================================
+
+# Performance Tips:
+# 1. Use Valkey for caching and sessions
+# 2. Enable database connection pooling with psycopg3
+# 3. Use django-cachalot for automatic ORM caching
+# 4. Monitor with django-silk in development
+# 5. Use orjson for JSON serialization
+# 6. Enable Brotli compression
+# 7. Use async views where appropriate
+# 8. Profile regularly with py-spy
+# 9. Monitor with APM tools in production
+# 10. Use CDN for static files
+
+# System Dependencies (install separately):
+# - Valkey Server (for caching)
+# - PostgreSQL (with connection pooling)
+# - Nginx (for reverse proxy and static files)
+# - Memcached (optional, alternative to Valkey)

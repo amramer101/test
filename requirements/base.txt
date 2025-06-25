@@ -1,0 +1,72 @@
+# Base dependencies for RM_Platform (Python 3.12 Optimized)
+# Core framework and essential dependencies with performance focus
+
+# Core Framework - Python 3.12 Compatible
+Django==5.0.6
+python-dotenv==1.0.1
+
+# Database & ORM Performance - Python 3.12 Optimized
+psycopg[binary,pool]==3.2.1      # Modern PostgreSQL adapter optimized for Python 3.12
+psycopg2-binary==2.9.9           # Fallback PostgreSQL adapter (fully compatible)
+django-dbconn-retry==0.1.7       # Database connection retry for better reliability
+
+# Media & Static Files - Python 3.12 Compatible
+Pillow==10.4.0                   # Updated for Python 3.12 optimization
+whitenoise==6.7.0
+
+# Web Server - Python 3.12 Ready
+gunicorn==23.0.0
+
+# Security & Authentication - Latest Versions
+argon2-cffi==23.1.0
+
+
+# Database URL parsing
+dj-database-url==2.2.0
+
+# Caching & Performance - Python 3.12 Optimized
+django-redis==5.4.0
+valkey[hiredis]==6.0.2           # Valkey with C extensions optimized for Python 3.12
+django-cachalot==2.8.0           # Automatic ORM caching for massive performance gains
+
+# Security Enhancements
+python-jose[cryptography]==3.3.0
+
+# Date/Time Utilities
+pytz==2024.1
+python-dateutil==2.9.0.post0
+
+# Data Validation - Python 3.12 Compatible
+pydantic==2.8.2                  # Updated for Python 3.12 performance improvements
+
+# Core Communication Dependencies
+django-filter==24.2
+drf-nested-routers==0.94.1
+django-ratelimit==4.1.0
+
+# Performance & Monitoring Dependencies - Python 3.12 Ready
+django-extensions==3.2.3
+valkey==6.0.2
+
+# Multi-factor Authentication
+django-otp==1.2.4
+qrcode[pil]==7.4.2
+
+# Security Headers & Protection
+django-axes==6.4.0
+django-csp==3.8
+
+# Monitoring & Performance Tracking - Python 3.12 Compatible
+prometheus-client==0.20.0
+sentry-sdk[django]==2.5.0
+psutil==5.9.8
+
+# Modern Python Async Support - Python 3.12 Enhanced
+asgiref==3.8.1
+
+# High-Performance JSON Serialization - Python 3.12 Optimized
+orjson==3.10.6                   # Ultra-fast JSON with Python 3.12 binary wheels
+
+# System Utilities
+setuptools==78.1.1               # Latest setuptools for Python 3.12
+wheel==0.43.0                    # Latest wheel for Python 3.12

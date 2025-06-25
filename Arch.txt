@@ -1,0 +1,99 @@
+RM_Platform/
+├── 📁 config/                          # Project configuration
+│   ├── __init__.py
+│   ├── settings/                       # Environment-specific settings
+│   │   ├── __init__.py
+│   │   ├── base.py                    # Common settings
+│   │   ├── development.py             # Development environment
+│   │   ├── production.py              # Production environment
+│   │   └── testing.py                 # Testing environment
+│   ├── urls.py                        # Root URL configuration
+│   ├── wsgi.py                        # WSGI application
+│   └── asgi.py                        # ASGI application
+├── 📁 apps/                           # Application domains
+│   ├── __init__.py
+│   ├── 📁 shared/                     # Shared utilities
+│   │   ├── __init__.py
+│   │   ├── models.py                  # Base models
+│   │   ├── serializers.py             # Base serializers
+│   │   ├── permissions.py             # Base permissions
+│   │   ├── exceptions.py              # Custom exceptions
+│   │   ├── pagination.py              # Pagination classes
+│   │   └── validators.py              # Custom validators
+│   ├── 📁 authentication/             # Authentication domain
+│   │   ├── __init__.py
+│   │   ├── models.py                  # Auth models
+│   │   ├── serializers.py             # Auth serializers
+│   │   ├── views.py                   # Auth views
+│   │   ├── services.py                # Auth business logic
+│   │   ├── permissions.py             # Auth permissions
+│   │   └── urls.py                    # Auth URLs
+│   ├── 📁 users/                      # User management domain
+│   │   ├── __init__.py
+│   │   ├── models.py                  # User models
+│   │   ├── serializers.py             # User serializers
+│   │   ├── views.py                   # User views
+│   │   ├── services.py                # User business logic
+│   │   ├── repositories.py            # User data access
+│   │   ├── permissions.py             # User permissions
+│   │   └── urls.py                    # User URLs
+│   ├── 📁 authorization/              # Authorization domain
+│   │   ├── __init__.py
+│   │   ├── models.py                  # Role/Permission models
+│   │   ├── serializers.py             # Auth serializers
+│   │   ├── views.py                   # Auth views
+│   │   ├── services.py                # RBAC business logic
+│   │   ├── permissions.py             # Permission classes
+│   │   └── urls.py                    # Auth URLs
+│   └── 📁 products/                   # Sample domain
+│       ├── __init__.py
+│       ├── models.py                  # Product models
+│       ├── serializers.py             # Product serializers
+│       ├── views.py                   # Product views
+│       ├── services.py                # Product business logic
+│       ├── permissions.py             # Product permissions
+│       └── urls.py                    # Product URLs
+├── 📁 core/                           # Core domain logic
+│   ├── __init__.py
+│   ├── models.py                      # Core models
+│   ├── services.py                    # Core services
+│   └── exceptions.py                  # Domain exceptions
+├── 📁 infrastructure/                 # External services
+│   ├── __init__.py
+│   ├── database.py                    # Database configuration
+│   ├── cache.py                       # Cache configuration
+│   ├── email.py                       # Email services
+│   └── storage.py                     # Storage services
+├── 📁 api/                           # API versioning
+│   ├── __init__.py
+│   ├── 📁 v1/                        # API version 1
+│   │   ├── __init__.py
+│   │   ├── urls.py                    # V1 URL routing
+│   │   └── routers.py                 # DRF routers
+│   └── 📁 v2/                        # API version 2 (future)
+│       ├── __init__.py
+│       └── urls.py
+├── 📁 middleware/                     # Custom middleware
+│   ├── __init__.py
+│   ├── security.py                    # Security middleware
+│   ├── logging.py                     # Request logging
+│   └── rate_limiting.py               # Rate limiting
+├── 📁 tests/                         # Test suites
+│   ├── __init__.py
+│   ├── 📁 unit/                      # Unit tests
+│   ├── 📁 integration/               # Integration tests
+│   └── 📁 fixtures/                  # Test fixtures
+├── 📁 docs/                          # Documentation
+├── 📁 static/                        # Static files
+├── 📁 media/                         # Media files
+├── 📁 locale/                        # Internationalization
+├── 📁 scripts/                       # Management scripts
+├── 📁 deploy/                        # Deployment configurations
+│   ├── docker/                       # Docker configurations
+│   ├── nginx/                        # Nginx configurations
+│   └── systemd/                      # Systemd services
+├── .env.example                       # Environment template
+├── .gitignore                        # Git ignore rules
+├── manage.py                         # Django management
+├── requirements.txt                   # Base requirements
+└── README.md                         # Project documentation
